@@ -1,0 +1,51 @@
+import streamlit as st
+from streamlit_option_menu import option_menu
+from map.info_map_all import run_info_map_all
+from map.info_map_indivisual import run_info_map_indivisual
+from manage.check_schedule import run_check_schedule
+from manage.event_list import run_event_list
+
+# def main():
+    # st.set_page_config(
+    #  page_title="생활패턴으로 비만지수 예측",
+    #  page_icon="💉",
+    # #  layout="wide",
+    #  initial_sidebar_state="expanded",
+    #  menu_items={
+    #      'Get Help': 'https://github.com/eyoo95/Streamlit_obesity',
+    #      'Report a bug': 'https://startcod.tistory.com/',
+    #  })
+st.set_page_config(
+    page_title="[Study-mate] AI + Sec]",
+    page_icon="👋",
+    layout="wide"
+)
+
+def main():
+   
+    with st.sidebar:
+
+        menu = option_menu('Menu',['info_map_all','info_map_indivisual', 'check_schedule', 'event_list'], icons = ['map','bell', 'calendar', 'file-earmark'],menu_icon="caret-down-fill", default_index=0,
+                            styles={
+        "container": {"padding": "5!important", "background-color": "#fafafa"},
+        "icon": {"color": "#243746", "font-size": "25px"}, 
+        "nav-link": {"font-size": "16px", "text-align": "left", "margin":"0px", "--hover-color": "#eee"},
+        "nav-link-selected": {"background-color": "#ef494c"},})    
+
+
+# icons = house, bar-chart, graph-up, map, gear, speedometer2, people, bell, geo-alt, tools, house-door, file-earmark, envelope, geom, gear-fill
+# calendar, envelope, 
+
+    # st.title('생활패턴으로 알아보는 비만정도 예측 앱')
+
+    if menu == 'info_map_all':
+            run_info_map_all()
+    elif menu == 'info_map_indivisual':
+            run_info_map_indivisual()
+    elif menu == 'check_schedule':
+            run_check_schedule()
+    elif menu == 'event_list':
+            run_event_list()
+
+if __name__ == '__main__':
+    main()

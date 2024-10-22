@@ -1,0 +1,30 @@
+import streamlit as st
+
+st.set_page_config(
+    page_title="[Study-mate] AI + Sec]",
+    page_icon="👋",
+)
+
+st.write("# [Study-mate] AI + Sec")
+
+st.sidebar.success("Select a pages above.")
+
+st.markdown(
+    """
+     ### 스터디 목적 
+    - Gen-AI 를 활용한 업무 생산성 향상
+    - 특히, 개발할때 날코딩과 Gen-AI 이용시 개발 속도 확인
+    
+    ### 사용한 Gen-AI (언어 모델)
+    - GPT-3.5 TURBO, GPT-4 TURBO
+
+    ### 개발환경
+    - Language : python 3.X
+    - Develop tool : visual Studio code
+    - Source code : git-hub
+    - Web develop : streamlit
+    
+     **Copyright by Doomin Kim 👈**
+    
+"""
+)
