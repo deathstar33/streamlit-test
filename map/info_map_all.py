@@ -22,11 +22,12 @@ def run_info_map_all():
 
         return df.set_index("서비스명")
     
-    directory_path = f'C:/MyProject/streamlit-test/files/'
+    directory_path = f'C:/files/'
     selected_files = glob.glob(os.path.join(directory_path, '*.xlsx'))
 
     selected_files.sort(reverse=True)
     default_file = glob.glob(os.path.join(directory_path, '*.xlsx'))
+
 
     selected_file = st.selectbox("데이터 파일을 선택하세요", selected_files, index=0 if default_file else -1)
 

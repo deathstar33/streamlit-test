@@ -21,7 +21,7 @@ def run_partners_list():
 
         return df.set_index("서비스명")
     
-    directory_path = f'C:/MyProject/streamlit-test/files/'
+    directory_path = f'C:/files/'
     selected_files = glob.glob(os.path.join(directory_path, '*.xlsx'))
 
     selected_files.sort(reverse=True)

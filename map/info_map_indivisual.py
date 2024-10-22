@@ -29,7 +29,7 @@ def run_info_map_indivisual():
 
 
     def service_data():
-        file_path = f'C:/MyProject/streamlit-test/files/1234.xlsx'
+        file_path = f'C:/files/1234.xlsx'
         df = pd.read_excel(file_path, sheet_name='서비스 MAP_24년')
         df.fillna('No Data', inplace=True)
         return df.set_index("서비스명")
